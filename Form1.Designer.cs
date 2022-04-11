@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.text = new System.Windows.Forms.Label();
             this.end = new System.Windows.Forms.Label();
             this.putin_jet = new System.Windows.Forms.PictureBox();
             this.missile = new System.Windows.Forms.PictureBox();
             this.russian_jet = new System.Windows.Forms.PictureBox();
-            this.nato_jet = new System.Windows.Forms.PictureBox();
+            this.soviet_jet = new System.Windows.Forms.PictureBox();
             this.jet = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.putin_jet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.missile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.russian_jet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nato_jet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soviet_jet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,15 +98,15 @@
             this.russian_jet.TabIndex = 2;
             this.russian_jet.TabStop = false;
             // 
-            // nato_jet
+            // soviet_jet
             // 
-            this.nato_jet.Image = global::FighterJet.Properties.Resources.nato_jet;
-            this.nato_jet.Location = new System.Drawing.Point(694, 12);
-            this.nato_jet.Name = "nato_jet";
-            this.nato_jet.Size = new System.Drawing.Size(222, 171);
-            this.nato_jet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.nato_jet.TabIndex = 1;
-            this.nato_jet.TabStop = false;
+            this.soviet_jet.Image = ((System.Drawing.Image)(resources.GetObject("soviet_jet.Image")));
+            this.soviet_jet.Location = new System.Drawing.Point(694, 12);
+            this.soviet_jet.Name = "soviet_jet";
+            this.soviet_jet.Size = new System.Drawing.Size(222, 171);
+            this.soviet_jet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.soviet_jet.TabIndex = 1;
+            this.soviet_jet.TabStop = false;
             // 
             // jet
             // 
@@ -128,7 +129,7 @@
             this.Controls.Add(this.text);
             this.Controls.Add(this.missile);
             this.Controls.Add(this.russian_jet);
-            this.Controls.Add(this.nato_jet);
+            this.Controls.Add(this.soviet_jet);
             this.Controls.Add(this.jet);
             this.Name = "Form1";
             this.Text = "Fighter Jet Shooter Game";
@@ -137,7 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.putin_jet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.missile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.russian_jet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nato_jet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soviet_jet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,7 +148,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox jet;
-        private System.Windows.Forms.PictureBox nato_jet;
+        private System.Windows.Forms.PictureBox soviet_jet;
         private System.Windows.Forms.PictureBox russian_jet;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.PictureBox missile;

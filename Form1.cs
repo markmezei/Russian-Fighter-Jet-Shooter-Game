@@ -23,12 +23,18 @@ namespace FighterJet
         {
             InitializeComponent();
             Timer.Start();
-            soundPlayer();  
+            backgroundSoundPlayer(); 
         }
 
-        private void soundPlayer()
+        private void backgroundSoundPlayer()
         {
-            SoundPlayer sound = new SoundPlayer(@"C:\Users\Mark\Documents\Programozás\FighterJet\FighterJet\Resources\C&C Red Alert 3 Theme - Soviet March.wav");
+            SoundPlayer sound = new SoundPlayer(@"C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\Resources\soviet march.wav");
+            sound.Play();
+        }
+
+        private void SoundEffect()
+        {
+            SoundPlayer sound = new SoundPlayer(@"C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\Resources\putin.wav");
             sound.Play();
         }
         private void jetIsMoving(object sender, KeyEventArgs key)
@@ -68,7 +74,7 @@ namespace FighterJet
         {
             Random random = new Random();
             text.Text = score.ToString();
-            nato_jet.Top += enemySpeed;
+            soviet_jet.Top += enemySpeed;
             russian_jet.Top += enemySpeed;
 
             if (moveLeft == true && jet.Left > 0)
@@ -96,11 +102,11 @@ namespace FighterJet
             {
                 shooting = false;
             }
-            if(missile.Bounds.IntersectsWith(nato_jet.Bounds))
+            if(missile.Bounds.IntersectsWith(soviet_jet.Bounds))
             {
                 score++;
-                nato_jet.Top = -450;
-                nato_jet.Left = random.Next(0, 850);
+                soviet_jet.Top = -450;
+                soviet_jet.Left = random.Next(0, 850);
                 shooting = false;
             }
             if(missile.Bounds.IntersectsWith(russian_jet.Bounds))
@@ -110,7 +116,7 @@ namespace FighterJet
                 russian_jet.Left = random.Next(0, 850);
                 shooting = false;
             }
-            if (jet.Bounds.IntersectsWith(nato_jet.Bounds) || jet.Bounds.IntersectsWith(russian_jet.Bounds) || jet.Bounds.IntersectsWith(putin_jet.Bounds))
+            if (jet.Bounds.IntersectsWith(soviet_jet.Bounds) || jet.Bounds.IntersectsWith(russian_jet.Bounds) || jet.Bounds.IntersectsWith(putin_jet.Bounds))
             {
                 GameOver();
             }
@@ -127,7 +133,7 @@ namespace FighterJet
             if(score >= 20)
             {
                 russian_jet.Top = -450;
-                nato_jet.Top = -450;
+                soviet_jet.Top = -450;
                 speed = 15;
                 putin_jet.Top += 2;
                 jet.Left = 420;
@@ -139,6 +145,7 @@ namespace FighterJet
         {
             Timer.Stop();
             end.Text += "GAME OVER!";
+            SoundEffect();
 
         }
     }

@@ -9,3 +9,14 @@ C:\Users\Mark\Documents\Programozás\FighterJet\FighterJet\obj\Debug\FighterJet.
 C:\Users\Mark\Documents\Programozás\FighterJet\FighterJet\obj\Debug\FighterJet.csproj.CoreCompileInputs.cache
 C:\Users\Mark\Documents\Programozás\FighterJet\FighterJet\obj\Debug\FighterJet.exe
 C:\Users\Mark\Documents\Programozás\FighterJet\FighterJet\obj\Debug\FighterJet.pdb
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\bin\Debug\FighterJet.exe.config
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\bin\Debug\FighterJet.exe
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\bin\Debug\FighterJet.pdb
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.csproj.AssemblyReference.cache
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.Form1.resources
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.Properties.Resources.resources
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.csproj.GenerateResource.cache
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.csproj.CoreCompileInputs.cache
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.exe
+C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\obj\Debug\FighterJet.pdb
