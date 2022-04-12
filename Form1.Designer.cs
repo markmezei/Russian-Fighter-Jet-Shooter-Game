@@ -54,7 +54,7 @@
             // 
             this.text.AutoSize = true;
             this.text.Font = new System.Drawing.Font("MV Boli", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text.Location = new System.Drawing.Point(467, 299);
+            this.text.Location = new System.Drawing.Point(12, 756);
             this.text.Name = "text";
             this.text.Size = new System.Drawing.Size(45, 46);
             this.text.TabIndex = 5;

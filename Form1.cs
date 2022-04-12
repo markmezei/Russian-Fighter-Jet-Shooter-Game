@@ -18,6 +18,8 @@ namespace FighterJet
         int enemySpeed = 3;
         int missileSpeed;
         bool moveLeft, moveRight, shooting;
+        int boss_health = 80;
+        Random random = new Random();
 
         public Form1()
         {
@@ -32,9 +34,14 @@ namespace FighterJet
             sound.Play();
         }
 
-        private void SoundEffect()
+        private void LoseSoundEffect()
         {
             SoundPlayer sound = new SoundPlayer(@"C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\Resources\putin.wav");
+            sound.Play();
+        }
+        private void WinSoundEffect()
+        {
+            SoundPlayer sound = new SoundPlayer(@"C:\Users\Mark\Documents\Programozás\Fighter Jet Shooter Game\Resources\Easy sound effect.wav");
             sound.Play();
         }
         private void jetIsMoving(object sender, KeyEventArgs key)
@@ -72,8 +79,7 @@ namespace FighterJet
      
         private void gameplay(object sender, EventArgs e)
         {
-            Random random = new Random();
-            text.Text = score.ToString();
+            text.Text = $"Score: {score}";
             soviet_jet.Top += enemySpeed;
             russian_jet.Top += enemySpeed;
 
@@ -81,13 +87,10 @@ namespace FighterJet
             {
                 jet.Left -= speed;
             }
-        
             if(moveRight == true && jet.Left < 900)
             {
                 jet.Left += speed;
             }
-            
-
             if(shooting == true)
             {
                 missileSpeed = 20;
@@ -130,23 +133,39 @@ namespace FighterJet
                 enemySpeed = 10; 
                 speed = 13;
             }
-            if(score >= 20)
+            if(score == 20)
             {
                 russian_jet.Top = -450;
                 soviet_jet.Top = -450;
                 speed = 15;
                 putin_jet.Top += 2;
                 jet.Left = 420;
+                text.Text = $"Score: {score}\nPutin's health: {boss_health}";
             }
-
+            if (missile.Bounds.IntersectsWith(putin_jet.Bounds) && score == 20)
+            {
+                boss_health -= 1;
+                if (boss_health == 0)
+                {
+                    putin_jet.Visible = false;
+                    GameOver();
+                }
+            }
         }
 
         private void GameOver()
         {
             Timer.Stop();
-            end.Text += "GAME OVER!";
-            SoundEffect();
-
+            if (boss_health > 0)
+            {
+                end.Text += "GAME OVER!";
+                LoseSoundEffect();
+            }
+            if (boss_health == 0 && missile.Bounds.IntersectsWith(putin_jet.Bounds))
+            {
+                end.Text += "WIN";
+                WinSoundEffect();
+            }
         }
     }
 }
